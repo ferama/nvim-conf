@@ -13,6 +13,7 @@ local servers = {
   "jsonls",
   "yamlls",
   "gopls",
+  "rust_analyzer",
 }
 
 lsp_installer.setup()
@@ -22,9 +23,7 @@ if not lspconfig_status_ok then
   return
 end
 
-util = require "lspconfig/util"
-
-
+local util = require "lspconfig/util"
 local opts = {}
 
 for _, server in pairs(servers) do

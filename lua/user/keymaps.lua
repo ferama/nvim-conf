@@ -52,6 +52,21 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 
+-- BufferLine
+keymap("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>")
+keymap("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>")
+keymap("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>")
+keymap("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>")
+keymap("n", "<leader>5", ":BufferLineGoToBuffer 5<CR>")
+keymap("n", "<leader>6", ":BufferLineGoToBuffer 6<CR>")
+keymap("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>")
+keymap("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>")
+keymap("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>")
+
+-- ToggleTerm
+keymap("n", "<leader>t", ":ToggleTerm<CR>", opts)
+keymap("t", "<leader>t", "<cmd>ToggleTerm<CR>", opts)
+
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
@@ -61,20 +76,6 @@ keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
--- Git
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
-
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
-
--- DAP
-keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
-keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
-keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
-keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
-keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
-keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
-keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
-keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
-keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
